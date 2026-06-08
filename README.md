@@ -10,22 +10,19 @@ https://demo.nopcommerce.com/
 - Maven
 - WebDriverManager
 - Page Object Model
-- Screenshots on failure
 
 ## Covered Workflows
-- Register valid customer
-- Register validation errors
+
+- Valid login
 - Invalid login
 - Logout
 - Search existing and non-existing products
 - Product details
 - Add to compare
-- Add to cart
-- Update cart quantity
-- Remove from cart
+- Add to cart from wishlist
 - Add/remove wishlist
-- Guest checkout
-- Contact Us
+- Add and remove from Compare products list
+
 
 ## How to Run in Eclipse
 1. Open Eclipse.
@@ -42,28 +39,22 @@ mvn clean test
 ## Project Structure
 ```text
 src/test/java
-├── base
-│   └── BaseTest.java
+
 ├── pages
+│   ├── baseTest.java
 │   ├── BasePage.java
 │   ├── HomePage.java
-│   ├── RegisterPage.java
 │   ├── LoginPage.java
 │   ├── SearchPage.java
 │   ├── ProductPage.java
-│   ├── CartPage.java
 │   ├── WishlistPage.java
-│   ├── CheckoutPage.java
-│   └── ContactUsPage.java
+│   └── ComparePage.java
 ├── tests
-│   ├── AuthenticationTests.java
-│   ├── ProductTests.java
-│   ├── CartAndWishlistTests.java
-│   └── CheckoutTests.java
-└── utils
-    ├── TestData.java
-    ├── ScreenshotUtils.java
-    └── TestListener.java
+│   ├── AuthenticationWorkflowTests.java
+│   ├── CatalogNavigationWorkflowTests.java
+│   ├── ProductComparisonWorkflowTests.java
+│   └── WishlistWorkflowTests.java
+
 ```
 
 ## Notes
